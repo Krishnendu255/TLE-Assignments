@@ -1,3 +1,10 @@
+/*
+    //N. Sum of a Matrix
+
+    https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/N
+
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 int r;
@@ -31,9 +38,6 @@ int main(){
             cin>>a2[i][j];
         }
     solve(a1,a2,a3,0,0);
-    //pass the matrices to the function solve
-    
-    
     //input ends here 
     // //iterative process for sum of matrices
     // for(int i=0; i<r; i++)

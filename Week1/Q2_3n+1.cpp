@@ -1,3 +1,10 @@
+/*
+//Q. 3n + 1 sequence    
+
+    https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/Q
+    
+*/
+
 #include<iostream>
 using namespace std;
 long long count=1;

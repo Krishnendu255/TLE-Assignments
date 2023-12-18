@@ -1,3 +1,11 @@
+/*
+//90. Subsets II
+
+    https://leetcode.com/problems/subsets-ii/
+
+*/
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -19,14 +27,19 @@ vector<vector<int>> subsets(vector<int>& nums) {
     vector<vector<int>>ans;
     vector<int> output;
     int i=0;
+    //nums should be unique there should be no duplicate elements
+    sort(nums.begin(),nums.end());
     solve(nums,i,ans,output);
+    //the ans should be unique
+    sort(ans.begin(),ans.end());
+    ans.erase(unique(ans.begin(),ans.end()),ans.end());
     return ans;
 }
 
 int main(){
-    vector<int> nums={1,2,3};
+    vector<int> nums={4,4,4,1,4};
     vector<vector<int>> a=subsets(nums);
-    //loop through this and print the elements and format should be like [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+
     cout<<"[";
     for(int i=0;i<a.size();i++){
         cout<<"[";
@@ -41,5 +54,6 @@ int main(){
             cout<<",";
         }
     }
+    cout<<"]";
     return 0;
 }
